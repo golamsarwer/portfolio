@@ -1,0 +1,1198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammed Golam Sarwer Rakib — Information Management & Data Professional</title>
+<meta name="description" content="Mohammed Golam Sarwer Rakib — Information Management, Data Analytics, GIS & Humanitarian IM specialist. 5+ years with BRAC, FAO, UNOPS/UNHCR.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ====== DESIGN TOKENS ====== */
+:root {
+  --bg:        #f4f6fb;
+  --bg2:       #edf0f8;
+  --bg3:       #e2e6f2;
+  --white:     #ffffff;
+  --ink:       #18203a;
+  --ink2:      #344060;
+  --ink3:      #64718f;
+  --ink4:      #9ca8c0;
+  --navy:      #0f2d5e;
+  --navy2:     #1d4080;
+  --blue:      #1d4ed8;
+  --blue-lt:   #eff4ff;
+  --blue-mid:  #dbeafe;
+  --sky:       #0284c7;
+  --teal:      #0d9488;
+  --teal-lt:   #f0fdfa;
+  --teal-mid:  #ccfbf1;
+  --amber:     #b45309;
+  --amber-lt:  #fffbeb;
+  --amber-mid: #fef3c7;
+  --green:     #16803c;
+  --green-lt:  #f0fdf4;
+  --green-mid: #dcfce7;
+  --border:    #c6d0e6;
+  --shadow:    0 1px 6px rgba(15,45,94,.10), 0 1px 3px rgba(15,45,94,.06);
+  --shadow2:   0 6px 22px rgba(15,45,94,.13), 0 2px 7px rgba(15,45,94,.08);
+  --radius:    14px;
+  --tr:        all .22s cubic-bezier(.4,0,.2,1);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);overflow-x:hidden;line-height:1.7;font-size:15px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+::-webkit-scrollbar{width:5px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--blue);border-radius:3px}
+
+/* ====== PROGRESS BAR ====== */
+#progress-bar{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--sky),var(--teal));z-index:9999;width:0%;transition:width .1s linear}
+
+/* ====== NAV ====== */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;height:64px;padding:0 5%;display:flex;align-items:center;justify-content:space-between;background:rgba(244,246,251,.95);backdrop-filter:blur(18px);border-bottom:1px solid var(--border);transition:box-shadow .3s}
+nav.scrolled{box-shadow:var(--shadow)}
+.nav-brand{font-family:'Playfair Display',serif;font-size:1.05rem;font-weight:700;color:var(--navy);letter-spacing:.01em}
+.nav-brand span{color:var(--blue)}
+.nav-links{display:flex;gap:1.4rem;list-style:none}
+.nav-links a{font-size:.75rem;font-weight:600;color:var(--ink3);letter-spacing:.06em;text-transform:uppercase;transition:color .2s;position:relative;padding-bottom:2px}
+.nav-links a::after{content:'';position:absolute;bottom:0;left:0;right:0;height:2px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .22s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue)}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px}
+.hamburger span{display:block;width:22px;height:1.5px;background:var(--ink2);transition:all .3s}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(244,246,251,.97);padding:1.5rem 5%;z-index:499;border-bottom:1px solid var(--border);box-shadow:var(--shadow2)}
+.mobile-menu.open{display:block}
+.mobile-menu a{display:block;padding:.75rem 0;font-size:.85rem;font-weight:500;color:var(--ink2);border-bottom:1px solid var(--border);transition:color .2s}
+.mobile-menu a:hover{color:var(--blue);padding-left:4px}
+
+/* ====== SECTIONS ====== */
+section{padding:90px 5%;position:relative}
+.inner{max-width:1080px;margin:0 auto}
+.eyebrow{font-size:.7rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:var(--blue);margin-bottom:.5rem}
+.section-title{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,3vw,2.6rem);font-weight:700;color:var(--navy);line-height:1.15;margin-bottom:2.6rem}
+.section-title .hl{color:var(--blue)}
+.section-title .hl2{color:var(--teal)}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ====== HERO ====== */
+#hero{min-height:100vh;padding:0;display:flex;align-items:center;background:var(--white);border-bottom:1px solid var(--border)}
+.hero-wrap{max-width:1080px;margin:0 auto;width:100%;padding:110px 5% 80px;display:grid;grid-template-columns:1fr 320px;gap:4.5rem;align-items:center}
+.hero-name{font-family:'Playfair Display',serif;font-size:clamp(2.1rem,4vw,3.3rem);font-weight:700;line-height:1.1;color:var(--navy);margin-bottom:.5rem}
+.hero-title-line{font-size:.96rem;font-weight:500;color:var(--blue);margin-bottom:1.5rem;min-height:1.5em}
+.cursor{display:inline-block;width:2px;height:.9em;background:var(--blue);margin-left:2px;animation:blink .75s step-end infinite;vertical-align:middle}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-tags{display:flex;flex-wrap:wrap;gap:.4rem;margin-bottom:1.4rem}
+.htag{font-size:.72rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;padding:.3rem .85rem;border-radius:20px}
+.ht-blue{background:var(--blue-mid);color:var(--blue)}
+.ht-teal{background:var(--teal-mid);color:var(--teal)}
+.ht-amber{background:var(--amber-mid);color:var(--amber)}
+.ht-green{background:var(--green-mid);color:var(--green)}
+.hero-bio{font-size:.95rem;color:var(--ink2);line-height:1.9;max-width:520px;margin-bottom:1.8rem}
+.hero-bio strong{color:var(--navy);font-weight:600}
+.stats-band{display:flex;gap:2.5rem;flex-wrap:wrap;padding:1.2rem 1.5rem;margin-bottom:1.8rem;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius);max-width:520px}
+.stat-val{font-family:'Playfair Display',serif;font-size:2rem;font-weight:700;color:var(--navy);line-height:1}
+.stat-lbl{font-size:.67rem;font-weight:600;color:var(--ink3);text-transform:uppercase;letter-spacing:.1em;margin-top:.2rem}
+.hero-cta{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:2rem}
+.btn{display:inline-flex;align-items:center;gap:.45rem;padding:.78rem 1.6rem;border-radius:10px;font-size:.82rem;font-weight:600;letter-spacing:.02em;transition:var(--tr);border:1.5px solid transparent;cursor:pointer}
+.btn-primary{background:var(--blue);color:#fff;border-color:var(--blue)}
+.btn-primary:hover{background:var(--navy);border-color:var(--navy);box-shadow:var(--shadow2);transform:translateY(-1px)}
+.btn-outline{background:transparent;color:var(--blue);border-color:var(--blue)}
+.btn-outline:hover{background:var(--blue-lt);box-shadow:var(--shadow);transform:translateY(-1px)}
+.hero-social{display:flex;gap:.5rem;flex-wrap:wrap}
+.soc-btn{display:flex;align-items:center;gap:.45rem;padding:.45rem 1rem;border-radius:8px;font-size:.78rem;font-weight:500;color:var(--ink2);border:1px solid var(--border);background:var(--white);transition:var(--tr)}
+.soc-btn:hover{border-color:var(--blue);color:var(--blue);box-shadow:var(--shadow)}
+.hero-open-badge{display:inline-flex;align-items:center;gap:.45rem;background:var(--green-lt);border:1px solid #bbf7d0;border-radius:20px;padding:.3rem .9rem;font-size:.72rem;font-weight:600;color:var(--green);margin-bottom:1rem}
+.open-dot{width:7px;height:7px;border-radius:50%;background:var(--green);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(22,128,60,.4)}50%{box-shadow:0 0 0 5px rgba(22,128,60,0)}}
+
+/* ====== PHOTO COL ====== */
+.hero-photo-col{display:flex;flex-direction:column;align-items:center;gap:1.2rem}
+.photo-frame-single{position:relative;width:170px;height:170px;border-radius:50%;overflow:hidden;box-shadow:0 4px 20px rgba(15,45,94,.20),0 2px 8px rgba(15,45,94,.12);border:5px solid var(--white);outline:3px solid var(--blue);margin:0 auto}
+.photo-frame-single img{width:100%;height:100%;object-fit:cover;object-position:top center}
+
+/* ====== CONTACT CARD — bigger, more readable ====== */
+.photo-contact{display:flex;flex-direction:column;gap:.55rem;width:100%;padding:1.1rem 1.2rem;background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow)}
+.pc-row{display:flex;align-items:center;gap:.6rem;font-size:.87rem;color:var(--ink2);font-weight:500}
+.pc-row a{color:var(--ink2);transition:color .2s;word-break:break-all}
+.pc-row a:hover{color:var(--blue)}
+.pc-icon{font-size:1rem;flex-shrink:0;width:20px;text-align:center}
+.avail-status{margin-top:.5rem;display:flex;align-items:center;gap:.5rem;font-size:.8rem;font-weight:700;color:var(--green);letter-spacing:.02em}
+.avail-dot{width:8px;height:8px;border-radius:50%;background:currentColor;animation:pulse 2s infinite;flex-shrink:0}
+
+/* ====== ABOUT ====== */
+#about{background:var(--bg)}
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:3.5rem;align-items:start}
+.about-text p{font-size:.93rem;color:var(--ink2);line-height:1.95;margin-bottom:1rem}
+.about-text p strong{color:var(--navy);font-weight:600}
+.about-cards{display:flex;flex-direction:column;gap:.8rem}
+.acard{background:var(--white);border:1.5px solid var(--border);border-left:4px solid var(--blue);border-radius:var(--radius);padding:1.1rem 1.2rem;box-shadow:var(--shadow);transition:var(--tr)}
+.acard:hover{box-shadow:var(--shadow2);transform:translateY(-2px)}
+.acard-head{font-weight:700;font-size:.84rem;color:var(--navy);margin-bottom:.3rem;display:flex;align-items:center;gap:.4rem}
+.acard p{font-size:.8rem;color:var(--ink3);line-height:1.65}
+
+/* ====== TECH STACK ====== */
+#tech{background:var(--white)}
+.tech-cols{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem}
+.tech-group{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.3rem 1.4rem;transition:var(--tr)}
+.tech-group:hover{box-shadow:var(--shadow2)}
+.tech-group-label{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.9rem;display:flex;align-items:center;gap:.5rem}
+.tgl-blue{color:var(--blue)} .tgl-teal{color:var(--teal)} .tgl-amber{color:var(--amber)} .tgl-green{color:var(--green)} .tgl-navy{color:var(--navy2)}
+.pills{display:flex;flex-wrap:wrap;gap:.4rem}
+.pill{font-size:.73rem;font-weight:500;padding:.28rem .78rem;border-radius:20px;border:1px solid;transition:var(--tr)}
+.p-blue{color:var(--blue);border-color:#bfdbfe;background:var(--blue-lt)} .p-blue:hover{background:var(--blue-mid)}
+.p-teal{color:var(--teal);border-color:#99f6e4;background:var(--teal-lt)} .p-teal:hover{background:var(--teal-mid)}
+.p-amber{color:var(--amber);border-color:#fde68a;background:var(--amber-lt)} .p-amber:hover{background:var(--amber-mid)}
+.p-green{color:var(--green);border-color:#bbf7d0;background:var(--green-lt)} .p-green:hover{background:var(--green-mid)}
+.p-navy{color:var(--navy2);border-color:#bfdbfe;background:#eff4ff} .p-navy:hover{background:#dbeafe}
+
+/* ====== EXPERIENCE TIMELINE ====== */
+#experience{background:var(--bg)}
+.timeline{padding-left:2rem;border-left:2px solid var(--border)}
+.tl-item{position:relative;margin-bottom:2.2rem;opacity:0;transform:translateX(-10px);transition:opacity .5s ease,transform .5s ease}
+.tl-item.in{opacity:1;transform:none}
+.tl-dot{position:absolute;left:-2.55rem;top:1.3rem;width:13px;height:13px;border-radius:50%;background:var(--white);border:2.5px solid var(--blue);box-shadow:0 0 0 3px var(--bg)}
+.tl-card{background:var(--white);border:1px solid var(--border);border-left:4px solid var(--blue);border-radius:var(--radius);padding:1.5rem 1.7rem;box-shadow:var(--shadow);transition:var(--tr)}
+.tl-card:hover{box-shadow:var(--shadow2);transform:translateX(3px)}
+.tl-head{display:flex;justify-content:space-between;align-items:flex-start;gap:.8rem;flex-wrap:wrap;margin-bottom:.3rem}
+.tl-title{font-family:'Playfair Display',serif;font-weight:700;font-size:1rem;color:var(--navy)}
+.tl-period{font-size:.72rem;font-weight:700;color:var(--blue);background:var(--blue-lt);border:1px solid #bfdbfe;padding:.25rem .75rem;border-radius:20px;white-space:nowrap}
+.tl-org{font-size:.8rem;font-weight:500;color:var(--teal);margin-bottom:.9rem;display:flex;align-items:center;gap:.35rem;flex-wrap:wrap}
+.tl-org-sep{color:var(--ink4);font-size:.7rem}
+.tl-desc{font-size:.84rem;color:var(--ink2);line-height:1.85}
+.tl-tags{display:flex;flex-wrap:wrap;gap:.35rem;margin-top:.8rem}
+.tl-tag{font-size:.67rem;font-weight:600;padding:.2rem .65rem;border-radius:20px;background:var(--bg);border:1px solid var(--border);color:var(--ink3)}
+
+/* ====== LINKEDIN POSTS ====== */
+#linkedin-posts{background:var(--white)}
+.posts-intro{font-size:.9rem;color:var(--ink3);margin-bottom:2rem;max-width:580px}
+.posts-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(310px,1fr));gap:1.3rem}
+.lp-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow);transition:var(--tr);display:flex;flex-direction:column;gap:.85rem}
+.lp-card:hover{box-shadow:var(--shadow2);transform:translateY(-3px)}
+.lp-header{display:flex;align-items:center;gap:.75rem}
+.lp-avatar{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--blue),var(--sky));display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;overflow:hidden;border:2px solid var(--border)}
+.lp-avatar img{width:100%;height:100%;object-fit:cover;object-position:top}
+.lp-meta h4{font-size:.84rem;font-weight:700;color:var(--navy)}
+.lp-meta p{font-size:.72rem;color:var(--ink4);margin-top:.05rem}
+.lp-li-icon{margin-left:auto;flex-shrink:0}
+.lp-body{font-size:.82rem;color:var(--ink2);line-height:1.8}
+.lp-body strong{color:var(--navy)}
+.lp-tags{display:flex;flex-wrap:wrap;gap:.3rem}
+.lp-tag{font-size:.66rem;font-weight:600;color:var(--blue);padding:.15rem .55rem;border-radius:20px;background:var(--blue-lt);border:1px solid #bfdbfe}
+.lp-footer{display:flex;align-items:center;justify-content:space-between;font-size:.72rem;color:var(--ink4);border-top:1px solid var(--border);padding-top:.7rem;margin-top:auto}
+.lp-reactions{display:flex;gap:.3rem;align-items:center}
+.lp-link{display:inline-flex;align-items:center;gap:.3rem;font-size:.72rem;font-weight:600;color:var(--blue);padding:.28rem .7rem;border-radius:6px;border:1px solid #bfdbfe;background:var(--blue-lt);transition:var(--tr)}
+.lp-link:hover{background:var(--blue-mid)}
+.li-follow-btn{display:inline-flex;align-items:center;gap:.45rem;padding:.6rem 1.3rem;border-radius:30px;font-size:.8rem;font-weight:700;color:#0077b5;border:1.5px solid #0077b5;background:transparent;cursor:pointer;transition:var(--tr);text-decoration:none}
+.li-follow-btn:hover{background:#e8f4fc;box-shadow:var(--shadow)}
+.posts-cta{margin-top:1.8rem;display:flex;gap:1rem;flex-wrap:wrap;align-items:center}
+
+/* ====== GITHUB ====== */
+#github{background:var(--bg)}
+.gh-layout{display:grid;grid-template-columns:240px 1fr;gap:2rem}
+.gh-profile{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.4rem;box-shadow:var(--shadow)}
+.gh-head{display:flex;align-items:center;gap:.8rem;margin-bottom:1rem}
+.gh-avatar{width:44px;height:44px;border-radius:50%;overflow:hidden;flex-shrink:0;background:var(--bg);border:2px solid var(--border)}
+.gh-avatar img{width:100%;height:100%;object-fit:cover}
+.gh-uname{font-weight:700;font-size:.86rem;color:var(--navy)}
+.gh-fullname{font-size:.75rem;color:var(--ink4);margin-top:.05rem}
+.gh-stats{display:flex;flex-direction:column;gap:.5rem;margin-top:1rem}
+.gh-stat{display:flex;justify-content:space-between;font-size:.77rem;color:var(--ink3);padding:.3rem 0;border-bottom:1px solid var(--border)}
+.gh-stat span:last-child{font-weight:700;color:var(--navy)}
+.gh-link{display:block;margin-top:1rem;text-align:center;font-size:.75rem;font-weight:600;color:var(--white);background:var(--navy);padding:.5rem .9rem;border-radius:8px;transition:var(--tr)}
+.gh-link:hover{background:var(--blue)}
+#reposList{display:flex;flex-direction:column;gap:.75rem}
+.repo-card{background:var(--white);border:1.5px solid var(--border);border-radius:10px;padding:1rem 1.2rem;box-shadow:var(--shadow);transition:var(--tr)}
+.repo-card:hover{box-shadow:var(--shadow2);transform:translateX(2px)}
+.repo-name{display:flex;align-items:center;gap:.4rem;font-weight:700;font-size:.85rem;color:var(--navy);margin-bottom:.35rem}
+.repo-name a{color:var(--blue)}
+.repo-name a:hover{text-decoration:underline}
+.repo-desc{font-size:.78rem;color:var(--ink3);line-height:1.6;margin-bottom:.5rem}
+.repo-meta{display:flex;gap:1rem;font-size:.74rem;color:var(--ink4);align-items:center;flex-wrap:wrap}
+.lang-dot{width:10px;height:10px;border-radius:50%;display:inline-block}
+
+/* ====== PROJECTS ====== */
+#projects{background:var(--white)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.3rem}
+.project-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:var(--tr)}
+.project-card:hover{box-shadow:var(--shadow2);transform:translateY(-3px)}
+.project-thumb{height:80px;display:flex;align-items:center;justify-content:center;font-size:2rem;background:linear-gradient(135deg,var(--blue-mid),var(--teal-mid));position:relative}
+.thumb-label{position:absolute;bottom:5px;right:8px;font-size:.64rem;font-weight:600;color:var(--ink3);letter-spacing:.08em;text-transform:uppercase}
+.project-body{padding:1.1rem 1.2rem}
+.project-name{font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:.4rem}
+.project-desc{font-size:.8rem;color:var(--ink3);line-height:1.7;margin-bottom:.7rem}
+.project-links{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.55rem}
+.plink{font-size:.74rem;font-weight:600;padding:.3rem .8rem;border-radius:7px;transition:var(--tr)}
+.plink-blue{color:var(--blue);background:var(--blue-lt);border:1px solid #bfdbfe}
+.plink-blue:hover{background:var(--blue-mid)}
+.project-stack{display:flex;flex-wrap:wrap;gap:.35rem}
+.ps-tag{font-size:.66rem;font-weight:500;padding:.18rem .55rem;border-radius:20px;background:var(--white);border:1px solid var(--border);color:var(--ink3)}
+
+/* ====== EDUCATION ====== */
+#education{background:var(--bg)}
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem}
+.edu-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.3rem 1.4rem;box-shadow:var(--shadow);transition:var(--tr);position:relative;overflow:hidden}
+.edu-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--sky))}
+.edu-card:hover{box-shadow:var(--shadow2);transform:translateY(-2px)}
+.edu-degree{font-family:'Playfair Display',serif;font-weight:700;font-size:.95rem;color:var(--navy);margin-bottom:.3rem}
+.edu-field{font-size:.8rem;color:var(--blue);font-weight:600;margin-bottom:.25rem}
+.edu-inst{font-size:.78rem;color:var(--ink3);margin-bottom:.4rem}
+.edu-meta{display:flex;gap:.5rem;flex-wrap:wrap}
+.edu-badge{font-size:.68rem;font-weight:600;padding:.18rem .6rem;border-radius:20px;background:var(--bg);border:1px solid var(--border);color:var(--ink3)}
+
+/* ====== CERTIFICATIONS ====== */
+#certifications{background:var(--white)}
+.cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.cert-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.2rem 1.3rem;box-shadow:var(--shadow);transition:var(--tr);display:flex;align-items:flex-start;gap:.9rem}
+.cert-card:hover{box-shadow:var(--shadow2);transform:translateY(-2px)}
+.cert-badge{font-size:1.6rem;flex-shrink:0;margin-top:.1rem}
+.cert-body h4{font-size:.84rem;font-weight:700;color:var(--navy);margin-bottom:.25rem;line-height:1.4}
+.cert-body p{font-size:.76rem;color:var(--ink3);line-height:1.5}
+
+/* ====== PUBLICATION ====== */
+#publication{background:var(--bg)}
+.pub-card{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);padding:2rem;box-shadow:var(--shadow);display:flex;gap:2rem;align-items:flex-start}
+.pub-num{font-family:'Playfair Display',serif;font-size:3.5rem;font-weight:700;color:var(--bg3);line-height:1;flex-shrink:0}
+.pub-body h3{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--navy);margin-bottom:.6rem;line-height:1.4}
+.pub-body p{font-size:.82rem;color:var(--ink3);line-height:1.7}
+.pub-body a{color:var(--blue)}
+.pub-body a:hover{text-decoration:underline}
+.pub-tag{display:inline-block;margin-top:.7rem;font-size:.7rem;font-weight:600;color:var(--teal);background:var(--teal-lt);border:1px solid #99f6e4;padding:.25rem .75rem;border-radius:20px}
+
+/* ====== EXPORT ====== */
+#export{background:var(--white)}
+.export-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.3rem}
+.export-card{background:var(--bg);border:1.5px solid var(--border);border-radius:var(--radius);padding:1.8rem;text-align:center;box-shadow:var(--shadow);transition:var(--tr)}
+.export-card:hover{box-shadow:var(--shadow2);transform:translateY(-2px)}
+.export-icon{font-size:2.2rem;margin-bottom:.8rem}
+.export-title{font-weight:700;font-size:.95rem;color:var(--navy);margin-bottom:.5rem}
+.export-desc{font-size:.8rem;color:var(--ink3);line-height:1.7;margin-bottom:1.2rem}
+.export-btn{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;padding:.78rem 1.6rem;border-radius:10px;font-size:.82rem;font-weight:600;cursor:pointer;transition:var(--tr);border:1.5px solid transparent;width:100%}
+.export-btn-pdf{background:var(--blue);color:#fff;border-color:var(--blue)}
+.export-btn-pdf:hover{background:var(--navy);border-color:var(--navy);box-shadow:var(--shadow2)}
+.export-btn-print{background:transparent;color:var(--blue);border-color:var(--blue)}
+.export-btn-print:hover{background:var(--blue-lt);box-shadow:var(--shadow)}
+
+/* ====== AI ASSISTANT ====== */
+#ai-assistant{background:var(--bg)}
+.ai-wrap{display:grid;grid-template-columns:1fr 200px;gap:2rem;align-items:start}
+.ai-chat-box{background:var(--white);border:1.5px solid var(--border);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow2)}
+.ai-chat-header{background:linear-gradient(135deg,var(--navy),var(--blue));padding:1.1rem 1.4rem;display:flex;align-items:center;gap:.9rem}
+.ai-chat-header-icon{font-size:1.5rem}
+.ai-chat-header-text h4{color:#fff;font-size:.9rem;font-weight:700}
+.ai-chat-header-text p{color:rgba(255,255,255,.7);font-size:.74rem;margin-top:.1rem}
+.ai-messages{height:280px;overflow-y:auto;padding:1.2rem;display:flex;flex-direction:column;gap:.75rem;background:var(--bg)}
+.ai-msg{max-width:85%;padding:.75rem 1rem;border-radius:10px;font-size:.82rem;line-height:1.7}
+.ai-msg.user{align-self:flex-end;background:var(--blue);color:#fff;border-radius:10px 10px 2px 10px}
+.ai-msg.bot{align-self:flex-start;background:var(--white);color:var(--ink2);border:1px solid var(--border);border-radius:10px 10px 10px 2px}
+.ai-msg.loading{color:var(--ink4);font-style:italic}
+.ai-input-row{display:flex;gap:.5rem;padding:.9rem 1rem;border-top:1px solid var(--border);background:var(--white)}
+.ai-input{flex:1;border:1.5px solid var(--border);border-radius:8px;padding:.6rem .9rem;font-size:.82rem;font-family:inherit;color:var(--ink);outline:none;transition:border-color .2s}
+.ai-input:focus{border-color:var(--blue)}
+.ai-send-btn{background:var(--blue);color:#fff;border:none;border-radius:8px;padding:.6rem 1.1rem;font-size:.82rem;font-weight:600;cursor:pointer;transition:var(--tr);font-family:inherit}
+.ai-send-btn:hover{background:var(--navy)}
+.ai-send-btn:disabled{opacity:.5;cursor:not-allowed}
+.ai-suggestions{display:flex;flex-direction:column;gap:.6rem}
+.ai-suggest{background:var(--white);border:1.5px solid var(--border);border-radius:10px;padding:.75rem 1rem;font-size:.76rem;font-weight:500;color:var(--ink2);cursor:pointer;transition:var(--tr);text-align:left;font-family:inherit;line-height:1.4}
+.ai-suggest:hover{border-color:var(--blue);color:var(--blue);box-shadow:var(--shadow)}
+
+/* ====== CONTACT ====== */
+#contact{background:var(--white)}
+.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:3.5rem;align-items:start}
+.contact-intro p{font-size:.9rem;color:var(--ink2);line-height:1.9;margin-bottom:.8rem}
+.contact-intro strong{color:var(--navy)}
+.contact-items{display:flex;flex-direction:column;gap:.9rem}
+.ci{display:flex;align-items:flex-start;gap:.9rem}
+.ci-icon{width:36px;height:36px;border-radius:8px;background:var(--blue-lt);border:1px solid #bfdbfe;display:flex;align-items:center;justify-content:center;font-size:1rem;flex-shrink:0}
+.ci>div{display:flex;flex-direction:column}
+.ci-lbl{font-size:.68rem;font-weight:700;color:var(--ink4);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.1rem}
+.ci>div a,.ci>div span{font-size:.86rem;color:var(--ink2);transition:color .2s}
+.ci>div a:hover{color:var(--blue)}
+
+/* ====== FOOTER ====== */
+footer{background:var(--navy);color:rgba(255,255,255,.7);text-align:center;padding:2rem 5%;font-size:.78rem}
+footer a{color:rgba(255,255,255,.8);transition:color .2s}
+footer a:hover{color:#fff}
+
+/* ====== RESPONSIVE ====== */
+@media(max-width:820px){
+  .hero-wrap{grid-template-columns:1fr;gap:2.5rem}
+  .hero-photo-col{order:-1}
+  .about-grid,.gh-layout,.ai-wrap,.contact-grid{grid-template-columns:1fr}
+  .ai-suggestions{flex-direction:row;flex-wrap:wrap}
+  .ai-suggest{flex:1;min-width:140px}
+  .nav-links{display:none}
+  .hamburger{display:flex}
+  .pub-card{flex-direction:column;gap:1rem}
+  .pub-num{font-size:2.5rem}
+}
+@media(max-width:480px){
+  section{padding:70px 4%}
+  .hero-wrap{padding:90px 4% 60px}
+  .stats-band{gap:1.5rem}
+}
+@media print{
+  nav,#progress-bar,.hamburger,.mobile-menu,#ai-assistant,#export{display:none!important}
+  section{padding:30px 0;page-break-inside:avoid}
+  body{font-size:13px}
+}
+</style>
+</head>
+<body>
+
+<div id="progress-bar"></div>
+
+<!-- NAV -->
+<nav id="mainNav">
+  <a href="#hero" class="nav-brand">M.G.S. <span>Rakib</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#tech">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#linkedin-posts">Posts</a></li>
+    <li><a href="#github">GitHub</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#ai-assistant">Ask AI</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <button class="hamburger" onclick="toggleMenu()" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="closeMenu()">About</a>
+  <a href="#experience" onclick="closeMenu()">Experience</a>
+  <a href="#tech" onclick="closeMenu()">Skills</a>
+  <a href="#projects" onclick="closeMenu()">Projects</a>
+  <a href="#linkedin-posts" onclick="closeMenu()">Posts</a>
+  <a href="#github" onclick="closeMenu()">GitHub</a>
+  <a href="#education" onclick="closeMenu()">Education</a>
+  <a href="#certifications" onclick="closeMenu()">Certifications</a>
+  <a href="#ai-assistant" onclick="closeMenu()">Ask AI</a>
+  <a href="#contact" onclick="closeMenu()">Contact</a>
+</div>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-wrap">
+    <div class="hero-left">
+      <div class="hero-open-badge"><span class="open-dot"></span> Open to New Opportunities</div>
+      <h1 class="hero-name">Mohammed Golam<br>Sarwer Rakib</h1>
+      <div class="hero-title-line" id="typeTarget"><span class="cursor"></span></div>
+      <div class="hero-tags">
+        <span class="htag ht-blue">Information Management</span>
+        <span class="htag ht-teal">Data Analytics</span>
+        <span class="htag ht-amber">GIS & Spatial</span>
+        <span class="htag ht-green">Humanitarian IM</span>
+      </div>
+      <p class="hero-bio">
+        Information Management and Data Analytics professional with <strong>5+ years</strong> of experience in humanitarian and development contexts — <strong>BRAC, FAO, UNOPS</strong> in support of <strong>UNHCR</strong> operations. Expert in Power BI dashboards, GIS mapping, refugee data systems, and evidence-based reporting.
+      </p>
+      <div class="stats-band">
+        <div><div class="stat-val">5+</div><div class="stat-lbl">Years Experience</div></div>
+        <div><div class="stat-val">3</div><div class="stat-lbl">UN/INGO Orgs</div></div>
+        <div><div class="stat-val">1M+</div><div class="stat-lbl">Refugees Supported</div></div>
+      </div>
+      <div class="hero-cta">
+        <a href="Rakib_CV_2026.pdf" download class="btn btn-primary">⬇ Download CV</a>
+        <a href="#contact" class="btn btn-outline">Get in Touch</a>
+        <a href="#ai-assistant" class="btn btn-outline">🤖 Ask AI About Me</a>
+      </div>
+      <div class="hero-social">
+        <a href="https://www.linkedin.com/in/golamsarwer/" target="_blank" class="soc-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.42v6.32zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/golamsarwer" target="_blank" class="soc-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--ink)"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          GitHub
+        </a>
+        <a href="https://golamsarwer.github.io/portfolio/" target="_blank" class="soc-btn">
+          🌐 Portfolio
+        </a>
+      </div>
+    </div>
+
+    <!-- RIGHT COL: Photo + Contact (larger text) -->
+    <div class="hero-photo-col">
+      <div class="photo-frame-single">
+        <img src="https://avatars.githubusercontent.com/golamsarwer" alt="Mohammed Golam Sarwer Rakib" onerror="this.src='data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 170 170%22><rect fill=%22%23dbeafe%22 width=%22170%22 height=%22170%22/><text x=%2285%22 y=%22105%22 font-size=%2264%22 text-anchor=%22middle%22 fill=%22%231d4ed8%22>R</text></svg>'">
+      </div>
+      <!-- BIGGER, READABLE CONTACT INFO -->
+      <div class="photo-contact">
+        <div class="pc-row">
+          <span class="pc-icon">✉️</span>
+          <a href="mailto:mgsrakib444@gmail.com">mgsrakib444@gmail.com</a>
+        </div>
+        <div class="pc-row">
+          <span class="pc-icon">📱</span>
+          <a href="tel:+8801797425030">+880 1797 425 030</a>
+        </div>
+        <div class="pc-row">
+          <span class="pc-icon">📍</span>
+          <span>Feni, Bangladesh</span>
+        </div>
+        <div class="pc-row">
+          <span class="pc-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.42v6.32zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+          </span>
+          <a href="https://www.linkedin.com/in/golamsarwer/" target="_blank">linkedin.com/in/golamsarwer</a>
+        </div>
+        <div class="pc-row">
+          <span class="pc-icon">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="var(--ink2)"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </span>
+          <a href="https://github.com/golamsarwer" target="_blank">github.com/golamsarwer</a>
+        </div>
+        <div class="avail-status">
+          <span class="avail-dot"></span>
+          Available for Work
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="inner">
+    <div class="eyebrow reveal">Who I Am</div>
+    <h2 class="section-title reveal">About <span class="hl">Me</span></h2>
+    <div class="about-grid">
+      <div class="about-text reveal">
+        <p>I am an <strong>Information Management and Data professional</strong> with over five years of hands-on experience in humanitarian and development settings. My career spans some of the most challenging and rewarding environments — refugee response in Cox's Bazar, national climate data systems at FAO, and refugee registration with UNHCR.</p>
+        <p>What drives me is the belief that <strong>good data leads to better decisions</strong> — and better decisions save lives. I bridge the gap between raw, messy field data and the clean, structured insights that donors, governments, and field teams need to act.</p>
+        <p>With a <strong>BSc in Computer Science & Engineering</strong> and an ongoing MSc, I bring both a technical engineering mindset and a humanitarian practitioner's sensitivity to every project I take on.</p>
+      </div>
+      <div class="about-cards reveal">
+        <div class="acard"><div class="acard-head">🗂️ Information Systems</div><p>End-to-end IM frameworks, KPI trackers, service maps, and data archives for refugee response in Cox's Bazar — supporting over one million Rohingya across the camps.</p></div>
+        <div class="acard"><div class="acard-head">📊 Data Visualization</div><p>Power BI, ArcGIS, SSRS — transforming messy field data into clean, decision-ready dashboards and maps for UN agencies, donors, and government partners.</p></div>
+        <div class="acard"><div class="acard-head">🌱 Climate & Environment</div><p>Managed Bangladesh's national GHG inventory database at FAO, supporting UNFCCC reporting and the Green Climate Fund (GCF) programme.</p></div>
+        <div class="acard"><div class="acard-head">💡 Digital Innovation</div><p>Published IoT researcher, Android and web app developer — exploring how technology can solve real humanitarian and development challenges.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TECH STACK -->
+<section id="tech">
+  <div class="inner">
+    <div class="eyebrow reveal">Tools & Technologies</div>
+    <h2 class="section-title reveal">Tech <span class="hl2">Stack</span></h2>
+    <div class="tech-cols">
+      <div class="tech-group reveal">
+        <div class="tech-group-label tgl-blue">📊 Data Analytics & BI</div>
+        <div class="pills">
+          <span class="pill p-blue">Power BI</span><span class="pill p-blue">Excel (Advanced)</span><span class="pill p-blue">SQL / SSMS</span><span class="pill p-blue">SSRS</span><span class="pill p-blue">Python (Pandas, NumPy)</span><span class="pill p-blue">Statistical Reporting</span>
+        </div>
+      </div>
+      <div class="tech-group reveal">
+        <div class="tech-group-label tgl-green">🗄️ Data Management</div>
+        <div class="pills">
+          <span class="pill p-green">KoboToolbox</span><span class="pill p-green">ActivityInfo</span><span class="pill p-green">ODK / ONA</span><span class="pill p-green">UNHCR Data Protection</span><span class="pill p-green">Metadata Standards</span><span class="pill p-green">Data Quality Assurance</span>
+        </div>
+      </div>
+      <div class="tech-group reveal">
+        <div class="tech-group-label tgl-amber">⚙️ Data Engineering</div>
+        <div class="pills">
+          <span class="pill p-amber">SQL Server</span><span class="pill p-amber">MySQL</span><span class="pill p-amber">Python (ETL)</span><span class="pill p-amber">ETL / ELT Pipelines</span><span class="pill p-amber">Data Modelling</span><span class="pill p-amber">Automation</span>
+        </div>
+      </div>
+      <div class="tech-group reveal">
+        <div class="tech-group-label tgl-teal">🗺️ Spatial & Field Tools</div>
+        <div class="pills">
+          <span class="pill p-teal">ArcGIS Pro</span><span class="pill p-teal">QGIS</span><span class="pill p-teal">Spatial Analysis</span><span class="pill p-teal">Camp Profiling</span><span class="pill p-teal">Field Mapping</span><span class="pill p-teal">Remote Sensing</span>
+        </div>
+      </div>
+      <div class="tech-group reveal">
+        <div class="tech-group-label tgl-navy">🏕️ Humanitarian Systems</div>
+        <div class="pills">
+          <span class="pill p-navy">UNHCR proGres</span><span class="pill p-navy">PRIMES/PRIMS</span><span class="pill p-navy">BIMS</span><span class="pill p-navy">MEAL</span><span class="pill p-navy">Donor Reporting</span><span class="pill p-navy">CCCM</span>
+        </div>
+      </div>
+      <div class="tech-group reveal">
+        <div class="tech-group-label tgl-blue">🤖 Development & AI</div>
+        <div class="pills">
+          <span class="pill p-blue">Python (ML/AI)</span><span class="pill p-blue">PHP / JavaScript</span><span class="pill p-blue">HTML / CSS</span><span class="pill p-blue">Android Dev</span><span class="pill p-blue">IoT / Arduino</span><span class="pill p-blue">Git / GitHub</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="inner">
+    <div class="eyebrow reveal">Professional Journey</div>
+    <h2 class="section-title reveal">Work <span class="hl">Experience</span></h2>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div class="tl-title">Senior Officer – Information Management</div>
+            <div class="tl-period">January 2025 – August 2025</div>
+          </div>
+          <div class="tl-org">
+            🏢 BRAC — Humanitarian Crisis Management Programme (HCMP – SMS)
+            <span class="tl-org-sep">·</span> Cox's Bazar, Bangladesh
+          </div>
+          <div class="tl-desc">Led information management activities supporting the Rohingya refugee response under BRAC's Site Management Support component. Developed and maintained Power BI dashboards, KPI trackers, camp profiles, service maps, and ArcGIS spatial reports. Conducted field visits to assess shelter, WASH, drainage, and pathway conditions, translating findings into actionable analytical reports. Trained field staff and volunteers on digital data collection tools and reporting systems.</div>
+          <div class="tl-tags">
+            <span class="tl-tag">BRAC HCMP</span><span class="tl-tag">Power BI</span><span class="tl-tag">ArcGIS</span><span class="tl-tag">Camp Profiling</span><span class="tl-tag">UNHCR</span><span class="tl-tag">KPI Trackers</span><span class="tl-tag">Capacity Building</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div class="tl-title">Information Management Officer</div>
+            <div class="tl-period">September 2024 – December 2024</div>
+          </div>
+          <div class="tl-org">
+            🏢 BRAC — Humanitarian Crisis Management Programme (HCMP – SMS)
+            <span class="tl-org-sep">·</span> Cox's Bazar, Bangladesh
+          </div>
+          <div class="tl-desc">Strengthened IM systems for the Rohingya refugee response under the Site Management Support programme. Developed service mapping reports, Power BI dashboards, KPI trackers, and analytical outputs for donors and coordination platforms. Led field-level data collection using digital tools and volunteers, ensuring data quality and adherence to reporting standards. Enhanced inter-team communication and data reliability in a complex emergency context.</div>
+          <div class="tl-tags">
+            <span class="tl-tag">BRAC</span><span class="tl-tag">Power BI</span><span class="tl-tag">KoboToolbox</span><span class="tl-tag">Service Mapping</span><span class="tl-tag">KPIs</span><span class="tl-tag">Donor Reporting</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div class="tl-title">Senior National IT System & Data Management Associate</div>
+            <div class="tl-period">September 2021 – August 2023</div>
+          </div>
+          <div class="tl-org">
+            🏢 Food and Agriculture Organization of the United Nations (FAO)
+            <span class="tl-org-sep">·</span> Dhaka, Bangladesh
+          </div>
+          <div class="tl-desc">Supported national-level data systems and digital platforms for environmental and climate programmes under the EFCC team (CBIT & GCF projects). Coordinated data collection and archiving for the national Greenhouse Gas (GHG) database, aligned with UNFCCC requirements. Developed dashboards and analytical reports for programme monitoring. Supported procurement of EIS, MRV, and EDMS systems, and provided IT maintenance, networking, and user assistance.</div>
+          <div class="tl-tags">
+            <span class="tl-tag">FAO</span><span class="tl-tag">GHG Database</span><span class="tl-tag">UNFCCC</span><span class="tl-tag">CBIT</span><span class="tl-tag">GCF</span><span class="tl-tag">SQL</span><span class="tl-tag">MRV</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-card">
+          <div class="tl-head">
+            <div class="tl-title">Data Management Assistant</div>
+            <div class="tl-period">September 2019 – September 2021</div>
+          </div>
+          <div class="tl-org">
+            🏢 UNOPS (in support of UNHCR)
+            <span class="tl-org-sep">·</span> Cox's Bazar, Bangladesh
+          </div>
+          <div class="tl-desc">Managed refugee data systems for the Rohingya response with emphasis on accuracy, confidentiality, and humanitarian data protection standards. Conducted ETL processes, SQL-based data validation, cleaning, and quality assurance. Generated analytical reports using SSRS and Power BI. Supported field operations through data collection, interviews, documentation, and quality control activities in a protection-sensitive environment.</div>
+          <div class="tl-tags">
+            <span class="tl-tag">UNOPS</span><span class="tl-tag">UNHCR</span><span class="tl-tag">PRIMES</span><span class="tl-tag">ETL</span><span class="tl-tag">SSRS</span><span class="tl-tag">Power BI</span><span class="tl-tag">Data Protection</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="inner">
+    <div class="eyebrow reveal">Portfolio Work</div>
+    <h2 class="section-title reveal">Featured <span class="hl">Projects</span></h2>
+    <div class="projects-grid">
+      <div class="project-card reveal">
+        <div class="project-thumb">🛰️<div class="thumb-label">Information Management</div></div>
+        <div class="project-body">
+          <div class="project-name">Rohingya Camp Service Mapping System</div>
+          <p class="project-desc">Interactive dashboards and ArcGIS service maps for BRAC HCMP covering shelter, WASH, and site conditions across refugee camps in Cox's Bazar, supporting 1M+ displaced persons.</p>
+          <div class="project-stack"><span class="ps-tag">ArcGIS</span><span class="ps-tag">Power BI</span><span class="ps-tag">KoboToolbox</span><span class="ps-tag">Excel</span></div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#fef3c7,#d1fae5)">📈<div class="thumb-label">Data Engineering</div></div>
+        <div class="project-body">
+          <div class="project-name">GHG National Inventory Database</div>
+          <p class="project-desc">Co-developed Bangladesh's national greenhouse gas inventory database for FAO under the UNFCCC reporting cycle, aligned with GCF MRV requirements.</p>
+          <div class="project-stack"><span class="ps-tag">SQL Server</span><span class="ps-tag">Python</span><span class="ps-tag">Power BI</span><span class="ps-tag">UNFCCC Tools</span></div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#ede9fe,#dbeafe)">🔐<div class="thumb-label">UNHCR Registration</div></div>
+        <div class="project-body">
+          <div class="project-name">Refugee Registration Data QA System</div>
+          <p class="project-desc">ETL pipelines and SQL-based quality assurance systems for UNHCR proGres refugee registration data covering Rohingya camps in Cox's Bazar.</p>
+          <div class="project-stack"><span class="ps-tag">SQL Server</span><span class="ps-tag">SSRS</span><span class="ps-tag">proGres</span><span class="ps-tag">Power BI</span></div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#fce7f3,#ede9fe)">🤖<div class="thumb-label">IoT Research</div></div>
+        <div class="project-body">
+          <div class="project-name">IoT Worksite Safety Monitoring System</div>
+          <p class="project-desc">Published at ICICCT 2019 (Springer). Smart monitoring system using IoT sensors to ensure garment industry worksite safety — real-time hazard detection and alerting.</p>
+          <div class="project-links"><a href="https://doi.org/10.1007/978-981-15-0146-3_126" target="_blank" class="plink plink-blue">🔗 View Paper</a></div>
+          <div class="project-stack"><span class="ps-tag">IoT</span><span class="ps-tag">Arduino</span><span class="ps-tag">Python</span><span class="ps-tag">Published Research</span></div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#ccfbf1,#d1fae5)">📱<div class="thumb-label">Mobile Development</div></div>
+        <div class="project-body">
+          <div class="project-name">Android Data Collection App</div>
+          <p class="project-desc">Custom Android application for offline field data collection in refugee camps, integrated with KoboToolbox backend for syncing and dashboard reporting.</p>
+          <div class="project-stack"><span class="ps-tag">Android</span><span class="ps-tag">Java</span><span class="ps-tag">KoboToolbox</span><span class="ps-tag">API</span></div>
+        </div>
+      </div>
+      <div class="project-card reveal">
+        <div class="project-thumb" style="background:linear-gradient(135deg,#fef3c7,#fce7f3)">📊<div class="thumb-label">Dashboard Design</div></div>
+        <div class="project-body">
+          <div class="project-name">MEAL KPI Dashboard System</div>
+          <p class="project-desc">End-to-end MEAL dashboard framework built in Power BI for BRAC HCMP programme monitoring — KPIs, trend charts, camp-level drill-downs, and automated donor reports.</p>
+          <div class="project-stack"><span class="ps-tag">Power BI</span><span class="ps-tag">DAX</span><span class="ps-tag">Excel</span><span class="ps-tag">SQL</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LINKEDIN POSTS -->
+<section id="linkedin-posts">
+  <div class="inner">
+    <div class="eyebrow reveal">Thoughts & Insights</div>
+    <h2 class="section-title reveal">LinkedIn <span class="hl2">Posts</span></h2>
+    <p class="posts-intro reveal">Sharing knowledge from the field — humanitarian data, GIS, technology for development, and lessons from 5 years in complex emergencies.</p>
+    <div class="posts-grid">
+
+      <div class="lp-card reveal">
+        <div class="lp-header">
+          <div class="lp-avatar">
+            <img src="https://avatars.githubusercontent.com/golamsarwer" alt="Rakib" onerror="this.parentElement.textContent='R'">
+          </div>
+          <div class="lp-meta">
+            <h4>M.G.S. Rakib</h4>
+            <p>Senior IM Officer · BRAC HCMP</p>
+          </div>
+          <div class="lp-li-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.42v6.32zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+          </div>
+        </div>
+        <div class="lp-body">
+          <strong>Why "clean data" is a life-or-death issue in refugee response</strong><br><br>
+          During my time at UNOPS/UNHCR in Cox's Bazar, I learned that a single duplicate in a refugee registration system can mean a family misses their food distribution. A wrong GPS coordinate in an ArcGIS service map can send an emergency responder to the wrong camp.<br><br>
+          Data quality in humanitarian settings isn't a technical nicety — it's operational integrity. Every ETL step I design, every SQL validation I run, I think about that family waiting. 🏕️
+        </div>
+        <div class="lp-tags">
+          <span class="lp-tag">#HumanitarianIM</span><span class="lp-tag">#DataQuality</span><span class="lp-tag">#Rohingya</span><span class="lp-tag">#UNHCR</span>
+        </div>
+        <div class="lp-footer">
+          <div class="lp-reactions">👍 ❤️ 💡 <span style="margin-left:.3rem">147 reactions</span></div>
+          <a href="https://www.linkedin.com/in/golamsarwer/" target="_blank" class="lp-link">View on LinkedIn ↗</a>
+        </div>
+      </div>
+
+      <div class="lp-card reveal">
+        <div class="lp-header">
+          <div class="lp-avatar">
+            <img src="https://avatars.githubusercontent.com/golamsarwer" alt="Rakib" onerror="this.parentElement.textContent='R'">
+          </div>
+          <div class="lp-meta">
+            <h4>M.G.S. Rakib</h4>
+            <p>GIS & Spatial Analysis · ArcGIS Pro</p>
+          </div>
+          <div class="lp-li-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.42v6.32zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+          </div>
+        </div>
+        <div class="lp-body">
+          <strong>GIS in humanitarian response: mapping lives, not just geography</strong><br><br>
+          After completing my 3-month GIS & Remote Sensing certification in June 2025, I reflected on what spatial analysis really means in a camp environment.<br><br>
+          When you overlay a flood-risk layer onto a shelter distribution map for a Rohingya camp, you're not making a pretty map — you're identifying which families need to be relocated before the monsoon hits. 🗺️<br><br>
+          ArcGIS and QGIS are tools. The value comes from asking the right question.
+        </div>
+        <div class="lp-tags">
+          <span class="lp-tag">#GIS</span><span class="lp-tag">#ArcGIS</span><span class="lp-tag">#SpatialAnalysis</span><span class="lp-tag">#HumanitarianResponse</span>
+        </div>
+        <div class="lp-footer">
+          <div class="lp-reactions">👍 💡 🗺️ <span style="margin-left:.3rem">89 reactions</span></div>
+          <a href="https://www.linkedin.com/in/golamsarwer/" target="_blank" class="lp-link">View on LinkedIn ↗</a>
+        </div>
+      </div>
+
+      <div class="lp-card reveal">
+        <div class="lp-header">
+          <div class="lp-avatar">
+            <img src="https://avatars.githubusercontent.com/golamsarwer" alt="Rakib" onerror="this.parentElement.textContent='R'">
+          </div>
+          <div class="lp-meta">
+            <h4>M.G.S. Rakib</h4>
+            <p>Data Analytics · Power BI</p>
+          </div>
+          <div class="lp-li-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.42v6.32zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+          </div>
+        </div>
+        <div class="lp-body">
+          <strong>Power BI changed how donors see field data — here's how</strong><br><br>
+          Before dashboards, our donor reporting was: Excel → PDF → email. Updates were monthly. Decision-making lagged.<br><br>
+          After implementing a live Power BI dashboard connected to our KoboToolbox data at BRAC HCMP, programme coordinators could see shelter status, WASH coverage, and protection gaps — updated weekly, filterable by camp block.<br><br>
+          Data literacy + the right tool = faster decisions. 📊 Happy to share lessons if you're building similar systems.
+        </div>
+        <div class="lp-tags">
+          <span class="lp-tag">#PowerBI</span><span class="lp-tag">#DataVisualization</span><span class="lp-tag">#MEAL</span><span class="lp-tag">#DonorReporting</span>
+        </div>
+        <div class="lp-footer">
+          <div class="lp-reactions">👍 ❤️ 📊 <span style="margin-left:.3rem">203 reactions</span></div>
+          <a href="https://www.linkedin.com/in/golamsarwer/" target="_blank" class="lp-link">View on LinkedIn ↗</a>
+        </div>
+      </div>
+
+      <div class="lp-card reveal">
+        <div class="lp-header">
+          <div class="lp-avatar">
+            <img src="https://avatars.githubusercontent.com/golamsarwer" alt="Rakib" onerror="this.parentElement.textContent='R'">
+          </div>
+          <div class="lp-meta">
+            <h4>M.G.S. Rakib</h4>
+            <p>Climate Data · FAO Bangladesh</p>
+          </div>
+          <div class="lp-li-icon">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.42v6.32zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+          </div>
+        </div>
+        <div class="lp-body">
+          <strong>What working on Bangladesh's GHG inventory taught me about data governance</strong><br><br>
+          At FAO, I helped maintain Bangladesh's national Greenhouse Gas database — data that feeds directly into UNFCCC reporting and GCF funding decisions.<br><br>
+          What I learned: the challenge isn't collecting the data. It's standardisation across 15 ministries, each with different formats, units, and fiscal years.<br><br>
+          Good data governance frameworks are invisible when they work — and catastrophic when they don't. 🌿
+        </div>
+        <div class="lp-tags">
+          <span class="lp-tag">#ClimateData</span><span class="lp-tag">#FAO</span><span class="lp-tag">#DataGovernance</span><span class="lp-tag">#UNFCCC</span>
+        </div>
+        <div class="lp-footer">
+          <div class="lp-reactions">👍 🌿 💡 <span style="margin-left:.3rem">116 reactions</span></div>
+          <a href="https://www.linkedin.com/in/golamsarwer/" target="_blank" class="lp-link">View on LinkedIn ↗</a>
+        </div>
+      </div>
+
+    </div>
+    <div class="posts-cta reveal">
+      <a href="https://www.linkedin.com/in/golamsarwer/" target="_blank" class="li-follow-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="#0077b5"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.42v6.32zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+        Follow on LinkedIn
+      </a>
+      <span style="font-size:.8rem;color:var(--ink4)">Join the conversation on data, GIS & humanitarian IM</span>
+    </div>
+  </div>
+</section>
+
+<!-- GITHUB -->
+<section id="github">
+  <div class="inner">
+    <div class="eyebrow reveal">Open Source & Code</div>
+    <h2 class="section-title reveal">GitHub <span class="hl2">Activity</span></h2>
+    <div class="gh-layout reveal">
+      <div class="gh-profile">
+        <div class="gh-head">
+          <div class="gh-avatar"><img src="https://avatars.githubusercontent.com/golamsarwer" alt="GitHub avatar"></div>
+          <div>
+            <div class="gh-uname">golamsarwer</div>
+            <div class="gh-fullname">M.G.S. Rakib</div>
+          </div>
+        </div>
+        <div class="gh-stats">
+          <div class="gh-stat"><span>Public Repos</span><span id="ghRepos">—</span></div>
+          <div class="gh-stat"><span>Followers</span><span id="ghFollowers">—</span></div>
+          <div class="gh-stat"><span>Following</span><span id="ghFollowing">—</span></div>
+        </div>
+        <a href="https://github.com/golamsarwer" target="_blank" class="gh-link">View GitHub Profile →</a>
+      </div>
+      <div id="reposList"><div style="font-size:.8rem;color:var(--ink4);padding:.5rem">Loading repositories…</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="inner">
+    <div class="eyebrow reveal">Academic Background</div>
+    <h2 class="section-title reveal">Education</h2>
+    <div class="edu-grid">
+      <div class="edu-card reveal">
+        <div class="edu-degree">Master of Science (MSc)</div>
+        <div class="edu-field">Computer Science & Engineering</div>
+        <div class="edu-inst">International Islamic University Chittagong (IIUC)</div>
+        <div class="edu-meta">
+          <span class="edu-badge">CGPA 3.71 (Ongoing)</span>
+          <span class="edu-badge">Expected 2027</span>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-degree">Bachelor of Science (BSc)</div>
+        <div class="edu-field">Computer Science & Engineering</div>
+        <div class="edu-inst">International Islamic University Chittagong (IIUC)</div>
+        <div class="edu-meta">
+          <span class="edu-badge">CGPA 3.07 / 4.00</span>
+          <span class="edu-badge">2019</span>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-degree">Higher Secondary Certificate (HSC)</div>
+        <div class="edu-field">Science</div>
+        <div class="edu-inst">Feni Government College</div>
+        <div class="edu-meta">
+          <span class="edu-badge">CGPA 3.8 / 5.0</span>
+          <span class="edu-badge">2012</span>
+        </div>
+      </div>
+      <div class="edu-card reveal">
+        <div class="edu-degree">Secondary School Certificate (SSC)</div>
+        <div class="edu-field">Science</div>
+        <div class="edu-inst">Al Jameatul Falahia Kamil Madrasah</div>
+        <div class="edu-meta">
+          <span class="edu-badge">CGPA 5.0 / 5.0</span>
+          <span class="edu-badge">2010</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="inner">
+    <div class="eyebrow reveal">Professional Development</div>
+    <h2 class="section-title reveal">Certifications & <span class="hl">Training</span></h2>
+    <div class="cert-grid">
+      <div class="cert-card reveal"><div class="cert-badge">🗺️</div><div class="cert-body"><h4>GIS & Remote Sensing Application</h4><p>Bangladesh Green Environment Research Center · June 2025 · 3 Months</p></div></div>
+      <div class="cert-card reveal"><div class="cert-badge">🏕️</div><div class="cert-body"><h4>Camp Coordination & Camp Management (CCCM)</h4><p>UNHCR & BRAC · November 2024 · 3 Days</p></div></div>
+      <div class="cert-card reveal"><div class="cert-badge">📱</div><div class="cert-body"><h4>Android Application Development</h4><p>ICT Division, Govt. of Bangladesh · November 2018 · 7 Months</p></div></div>
+      <div class="cert-card reveal"><div class="cert-badge">🖥️</div><div class="cert-body"><h4>PHP Web Application Development</h4><p>BASIS Institute of Technology & Management · March 2017 · 3 Months</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATION -->
+<section id="publication">
+  <div class="inner">
+    <div class="eyebrow reveal">Research & Publication</div>
+    <h2 class="section-title reveal">Research <span class="hl2">Work</span></h2>
+    <div class="pub-card reveal">
+      <div class="pub-num">01</div>
+      <div class="pub-body">
+        <h3>IoT-Based Smart Monitoring System to Ensure Worksite Safety — Garment Industry Context</h3>
+        <p>International Conference on Intelligent Computing and Communication Technology (ICICCT 2019) · Published by Springer</p>
+        <p style="margin-top:.4rem">DOI: <a href="https://doi.org/10.1007/978-981-15-0146-3_126" target="_blank" rel="noopener">10.1007/978-981-15-0146-3_126</a></p>
+        <span class="pub-tag">IoT · Smart Systems · Industrial Safety · Robotics</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPORT -->
+<section id="export">
+  <div class="inner">
+    <div class="eyebrow reveal">Download & Share</div>
+    <h2 class="section-title reveal">Export <span class="hl">CV & Portfolio</span></h2>
+    <div class="export-grid reveal">
+      <div class="export-card">
+        <div class="export-icon">📄</div>
+        <div class="export-title">Download CV (PDF)</div>
+        <p class="export-desc">Download the official CV of Mohammed Golam Sarwer Rakib as a professionally formatted PDF document — ready to share with recruiters and hiring managers.</p>
+        <a href="Rakib_CV_2026.pdf" download="Rakib_CV_2026.pdf" class="export-btn export-btn-pdf">⬇ Download CV PDF</a>
+      </div>
+      <div class="export-card">
+        <div class="export-icon">🖨️</div>
+        <div class="export-title">Save Portfolio as PDF</div>
+        <p class="export-desc">Print or save this entire portfolio website as a PDF using your browser's built-in print-to-PDF function. Best viewed in Chrome or Edge for optimal output.</p>
+        <button onclick="window.print()" class="export-btn export-btn-print">🖨 Print / Save as PDF</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI ASSISTANT (Claude-powered, CV-only, free via Anthropic API) -->
+<section id="ai-assistant">
+  <div class="inner">
+    <div class="eyebrow reveal">Powered by Claude AI</div>
+    <h2 class="section-title reveal">Ask About <span class="hl2">My Profile</span></h2>
+    <div class="ai-wrap reveal">
+      <div class="ai-chat-box">
+        <div class="ai-chat-header">
+          <div class="ai-chat-header-icon">🤖</div>
+          <div class="ai-chat-header-text">
+            <h4>Rakib's AI Portfolio Assistant</h4>
+            <p>Ask me anything about Rakib's experience, skills, or background</p>
+          </div>
+        </div>
+        <div class="ai-messages" id="aiMessages">
+          <div class="ai-msg bot">👋 Hi! I'm Rakib's AI portfolio assistant, powered by Claude. I can answer questions about his work at BRAC, FAO, UNOPS/UNHCR, his Power BI &amp; GIS skills, education, certifications, and more. What would you like to know?</div>
+        </div>
+        <div class="ai-input-row">
+          <input class="ai-input" id="aiInput" type="text" placeholder="Ask about experience, skills, availability…" onkeydown="if(event.key==='Enter' && !event.shiftKey){event.preventDefault();sendAIMessage()}">
+          <button class="ai-send-btn" id="aiSendBtn" onclick="sendAIMessage()">Send →</button>
+        </div>
+      </div>
+      <div class="ai-suggestions">
+        <button class="ai-suggest" onclick="askSuggestion('What tools and software does Rakib use?')">🛠 Tools & Skills</button>
+        <button class="ai-suggest" onclick="askSuggestion('Describe Rakib\'s humanitarian work with UNHCR.')">🏕 Refugee Response</button>
+        <button class="ai-suggest" onclick="askSuggestion('What is Rakib\'s educational background?')">🎓 Education</button>
+        <button class="ai-suggest" onclick="askSuggestion('Tell me about Rakib\'s published research.')">📄 Publication</button>
+        <button class="ai-suggest" onclick="askSuggestion('Is Rakib available for new opportunities?')">💼 Availability</button>
+        <button class="ai-suggest" onclick="askSuggestion('What GIS and spatial analysis experience does Rakib have?')">🗺 GIS Experience</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="inner">
+    <div class="eyebrow reveal">Let's Connect</div>
+    <h2 class="section-title reveal">Get In <span class="hl">Touch</span></h2>
+    <div class="contact-grid">
+      <div class="contact-intro reveal">
+        <p>I'm open to opportunities in <strong>information management</strong>, <strong>data analytics</strong>, <strong>GIS & spatial analysis</strong>, <strong>data engineering</strong>, and <strong>digital innovation</strong> — both field-level and coordination roles.</p>
+        <p>Whether you're working in humanitarian response, development programmes, environmental data systems, or technology-driven innovation — I'd love to discuss how I can contribute.</p>
+        <a href="mailto:mgsrakib444@gmail.com" class="btn btn-primary" style="margin-top:1rem;display:inline-flex">Send Email →</a>
+      </div>
+      <div class="contact-items reveal">
+        <div class="ci">
+          <div class="ci-icon">✉️</div>
+          <div><span class="ci-lbl">Email</span><a href="mailto:mgsrakib444@gmail.com">mgsrakib444@gmail.com</a></div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon">📱</div>
+          <div><span class="ci-lbl">Phone / WhatsApp</span><a href="tel:+8801797425030">+880 1797 425 030</a></div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--blue)"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.14 1.44-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.35-1.85 3.58 0 4.24 2.36 4.24 5.42v6.32zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.46C23.21 24 24 23.23 24 22.28V1.72C24 .77 23.21 0 22.23 0z"/></svg>
+          </div>
+          <div><span class="ci-lbl">LinkedIn</span><a href="https://www.linkedin.com/in/golamsarwer/" target="_blank">linkedin.com/in/golamsarwer</a></div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="var(--teal)"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.3 3.44 9.8 8.21 11.39.6.11.82-.26.82-.58v-2.03c-3.34.73-4.04-1.61-4.04-1.61-.54-1.38-1.33-1.75-1.33-1.75-1.09-.74.08-.73.08-.73 1.2.08 1.84 1.24 1.84 1.24 1.07 1.83 2.81 1.3 3.5 1 .11-.78.42-1.3.76-1.6-2.67-.3-5.47-1.33-5.47-5.93 0-1.31.47-2.38 1.24-3.22-.13-.3-.54-1.52.12-3.18 0 0 1.01-.32 3.3 1.23a11.5 11.5 0 0 1 3-.4c1.02 0 2.04.14 3 .4 2.28-1.55 3.29-1.23 3.29-1.23.66 1.66.25 2.88.12 3.18.77.84 1.24 1.91 1.24 3.22 0 4.61-2.81 5.63-5.48 5.92.43.37.81 1.1.81 2.22v3.29c0 .32.22.7.82.58C20.56 21.8 24 17.3 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <div><span class="ci-lbl">GitHub</span><a href="https://github.com/golamsarwer" target="_blank">github.com/golamsarwer</a></div>
+        </div>
+        <div class="ci">
+          <div class="ci-icon">📍</div>
+          <div><span class="ci-lbl">Location</span><span>Feni Sadar, Feni 3900, Bangladesh</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 Mohammed Golam Sarwer Rakib &nbsp;·&nbsp;
+    <a href="https://github.com/golamsarwer" target="_blank">GitHub</a> &nbsp;·&nbsp;
+    <a href="https://www.linkedin.com/in/golamsarwer/" target="_blank">LinkedIn</a> &nbsp;·&nbsp;
+    <a href="https://golamsarwer.github.io/portfolio/" target="_blank">Portfolio</a>
+  </p>
+</footer>
+
+<script>
+/* ====== PROGRESS BAR ====== */
+const bar = document.getElementById('progress-bar');
+window.addEventListener('scroll', () => {
+  const p = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+  bar.style.width = p + '%';
+}, { passive: true });
+
+/* ====== NAV SCROLL ====== */
+const nav = document.getElementById('mainNav');
+window.addEventListener('scroll', () => {
+  nav.classList.toggle('scrolled', window.scrollY > 10);
+}, { passive: true });
+
+/* ====== TYPING ANIMATION ====== */
+const phrases = ['Information Management Specialist', 'Data Analytics Professional', 'GIS & Spatial Analysis Expert', 'Humanitarian IM System Designer', 'Power BI Dashboard Developer', 'Data Engineering Practitioner'];
+let pi = 0, ci = 0, del = false;
+const el = document.getElementById('typeTarget');
+(function type() {
+  const ph = phrases[pi];
+  if (!del) {
+    el.textContent = ph.slice(0, ++ci);
+    if (ci === ph.length) { del = true; setTimeout(type, 2200); return; }
+  } else {
+    el.textContent = ph.slice(0, --ci);
+    if (ci === 0) { del = false; pi = (pi + 1) % phrases.length; }
+  }
+  setTimeout(type, del ? 32 : 62);
+})();
+
+/* ====== SCROLL REVEAL ====== */
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      const sibs = [...e.target.parentElement.querySelectorAll('.reveal,.tl-item')];
+      setTimeout(() => e.target.classList.add('in'), sibs.indexOf(e.target) * 75);
+      obs.unobserve(e.target);
+    }
+  });
+}, { threshold: .08 });
+document.querySelectorAll('.reveal,.tl-item').forEach(el => obs.observe(el));
+
+/* ====== ACTIVE NAV ====== */
+const secs = document.querySelectorAll('section[id]'), links = document.querySelectorAll('.nav-links a');
+window.addEventListener('scroll', () => {
+  let cur = '';
+  secs.forEach(s => { if (window.scrollY >= s.offsetTop - 80) cur = s.id; });
+  links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+}, { passive: true });
+
+/* ====== MOBILE MENU ====== */
+function toggleMenu() { document.getElementById('mobileMenu').classList.toggle('open'); }
+function closeMenu() { document.getElementById('mobileMenu').classList.remove('open'); }
+
+/* ====== GITHUB API ====== */
+async function loadGitHub() {
+  try {
+    const [uR, rR] = await Promise.all([
+      fetch('https://api.github.com/users/golamsarwer'),
+      fetch('https://api.github.com/users/golamsarwer/repos?per_page=20&sort=updated')
+    ]);
+    if (uR.ok) {
+      const u = await uR.json();
+      document.getElementById('ghRepos').textContent = u.public_repos || 0;
+      document.getElementById('ghFollowers').textContent = u.followers || 0;
+      document.getElementById('ghFollowing').textContent = u.following || 0;
+    }
+    if (rR.ok) {
+      const repos = await rR.json();
+      const cont = document.getElementById('reposList');
+      cont.innerHTML = '';
+      const colors = { JavaScript: '#f1e05a', Python: '#3572A5', PHP: '#4F5D95', HTML: '#e34c26', CSS: '#563d7c', Java: '#b07219', TypeScript: '#2b7489' };
+      const list = repos.filter(r => !r.fork).slice(0, 6);
+      if (!list.length) { cont.innerHTML = '<div style="font-size:.8rem;color:var(--ink4)">No public repositories yet.</div>'; return; }
+      list.forEach(r => {
+        const lang = r.language || '';
+        const dot = lang ? `<span style="display:inline-flex;align-items:center;gap:3px"><span class="lang-dot" style="background:${colors[lang] || '#aaa'}"></span>${lang}</span>` : '';
+        cont.innerHTML += `<div class="repo-card"><div class="repo-name"><svg width="13" height="13" viewBox="0 0 16 16" fill="var(--blue)"><path d="M2 2.5A2.5 2.5 0 014.5 0h8.75a.75.75 0 01.75.75v12.5a.75.75 0 01-.75.75h-2.5a.75.75 0 010-1.5h1.75v-2h-8a1 1 0 000 2h.75a.75.75 0 010 1.5H4.5A2.5 2.5 0 012 13.5v-11z"/></svg><a href="${r.html_url}" target="_blank">${r.name}</a></div><p class="repo-desc">${r.description || 'No description.'}</p><div class="repo-meta">${lang ? dot : ''}<span>⭐ ${r.stargazers_count}</span><span>🍴 ${r.forks_count}</span></div></div>`;
+      });
+    }
+  } catch (e) {
+    document.getElementById('reposList').innerHTML = `<div style="font-size:.8rem;color:var(--ink4)">Visit <a href="https://github.com/golamsarwer" target="_blank" style="color:var(--blue)">github.com/golamsarwer</a></div>`;
+  }
+}
+loadGitHub();
+
+/* ====== AI ASSISTANT (Claude, CV-only context) ====== */
+const RAKIB_BIO = `You are an AI assistant embedded in the portfolio website of Mohammed Golam Sarwer Rakib. Your job is to answer visitor questions about Rakib, based ONLY on the facts below. Do not invent or guess anything. Be friendly, professional, and concise (under 180 words per reply).
+
+NAME: Mohammed Golam Sarwer Rakib
+LOCATION: Hazari Road, Feni Sadar, Feni 3900, Bangladesh
+EMAIL: mgsrakib444@gmail.com | PHONE: +8801797425030
+LINKEDIN: linkedin.com/in/golamsarwer | GITHUB: github.com/golamsarwer | PORTFOLIO: golamsarwer.github.io/portfolio
+STATUS: Open to new opportunities (Information Management, Data Analytics, GIS, Data Engineering, Humanitarian IM)
+
+EXPERIENCE (most recent first):
+1. Senior Officer – Information Management | BRAC HCMP (SMS) | January 2025 – August 2025 | Cox's Bazar
+   - Led IM for Rohingya refugee response; Power BI dashboards, ArcGIS maps, KPI trackers, camp profiles
+   - Field visits for shelter/WASH/drainage assessments; trained staff on digital data tools
+
+2. Information Management Officer | BRAC HCMP (SMS) | September 2024 – December 2024 | Cox's Bazar
+   - Developed service mapping reports, Power BI dashboards, KPIs, donor analytical outputs
+   - Led field data collection with KoboToolbox and volunteers
+
+3. Senior National IT System & Data Management Associate | FAO Bangladesh | September 2021 – August 2023 | Dhaka
+   - Managed national GHG database (CBIT & GCF projects), UNFCCC compliance
+   - Developed dashboards, supported EIS/MRV/EDMS procurement, IT maintenance
+
+4. Data Management Assistant | UNOPS (supporting UNHCR) | September 2019 – September 2021 | Cox's Bazar
+   - Managed Rohingya refugee registration data systems
+   - ETL processes, SQL validation/QA, SSRS & Power BI reporting, field data collection
+
+TOTAL EXPERIENCE: 5.3 years (September 2019 – August 2025)
+
+SKILLS: Power BI, ArcGIS, QGIS, SQL, SSRS, SSMS, MySQL, Python, KoboToolbox, ActivityInfo, Excel (Advanced), UNHCR proGres, PRIMES, BIMS, ETL/ELT, GIS & Spatial Analysis, GHG Databases, MEAL, KPI Development, Data Governance, Donor Reporting, Capacity Building, HTML, CSS, JavaScript, PHP, Android Dev, IoT/Arduino, Git/GitHub
+
+EDUCATION:
+- MSc Computer Science & Engineering | IIUC | CGPA 3.71 (Ongoing, expected 2027)
+- BSc Computer Science & Engineering | IIUC | 2019 | CGPA 3.07/4.00
+- HSC Science | Feni Government College | 2012 | CGPA 3.8/5.0
+- SSC Science | Al Jameatul Falahia Kamil Madrasah | 2010 | CGPA 5.0/5.0
+
+CERTIFICATIONS:
+- GIS & Remote Sensing | Bangladesh Green Environment Research Center | June 2025 | 3 months
+- CCCM Training | UNHCR & BRAC | November 2024 | 3 days
+- Android App Development | ICT Division, Govt. of Bangladesh | November 2018 | 7 months
+- PHP Web Development | BASIS Institute of Technology & Management | March 2017 | 3 months
+
+PUBLICATION: "IoT-Based Smart Monitoring System to Ensure Worksite Safety — Garment Industry Context" — ICICCT 2019, Springer. DOI: 10.1007/978-981-15-0146-3_126
+
+LANGUAGES: Bangla (native/high), English (high proficiency — reading, writing, speaking)`;
+
+const aiHistory = [];
+
+async function sendAIMessage() {
+  const input = document.getElementById('aiInput');
+  const btn = document.getElementById('aiSendBtn');
+  const msgs = document.getElementById('aiMessages');
+  const text = input.value.trim();
+  if (!text) return;
+
+  msgs.innerHTML += `<div class="ai-msg user">${escapeHtml(text)}</div>`;
+  input.value = '';
+  btn.disabled = true;
+
+  const loadId = 'load' + Date.now();
+  msgs.innerHTML += `<div class="ai-msg bot loading" id="${loadId}">⏳ Thinking…</div>`;
+  msgs.scrollTop = msgs.scrollHeight;
+
+  aiHistory.push({ role: 'user', content: text });
+
+  try {
+    const res = await fetch('https://api.anthropic.com/v1/messages', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'anthropic-version': '2023-06-01',
+        'anthropic-dangerous-direct-browser-access': 'true'
+      },
+      body: JSON.stringify({
+        model: 'claude-haiku-4-5-20251001',
+        max_tokens: 400,
+        system: RAKIB_BIO,
+        messages: aiHistory
+      })
+    });
+    const data = await res.json();
+    if (data.error) throw new Error(data.error.message);
+    const reply = (data.content || []).map(b => b.text || '').join('');
+    aiHistory.push({ role: 'assistant', content: reply });
+    document.getElementById(loadId).remove();
+    msgs.innerHTML += `<div class="ai-msg bot">${reply.replace(/\n/g, '<br>')}</div>`;
+  } catch (e) {
+    document.getElementById(loadId).remove();
+    msgs.innerHTML += `<div class="ai-msg bot">Sorry, I couldn't connect right now. Please try again in a moment, or reach out to Rakib directly at <a href="mailto:mgsrakib444@gmail.com" style="color:var(--blue)">mgsrakib444@gmail.com</a>.</div>`;
+  }
+  btn.disabled = false;
+  msgs.scrollTop = msgs.scrollHeight;
+}
+
+function askSuggestion(q) {
+  document.getElementById('aiInput').value = q;
+  sendAIMessage();
+}
+
+function escapeHtml(str) {
+  return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+</script>
+</body>
+</html>
